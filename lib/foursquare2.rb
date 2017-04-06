@@ -17,7 +17,7 @@ module Foursquare2
           tip << check_tip if check_tip.text.downcase.include? term.downcase
         end
       end
-      Hashie::Mash.new({:count => tip.count, :items => tip })
+      Hashie::Mash.new({:tip_count => tip.count, :items => tip })
     end
 
     def configure
